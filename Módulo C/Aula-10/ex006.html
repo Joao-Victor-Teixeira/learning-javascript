@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        body{
+            background-color: rgb(32, 32, 32);
+            font: normal 20pt Arial;
+            color: rgb(255, 255, 255);
+        }
+        div#area{
+            font: normal 20pt Arial;
+            background-color: rgb(42, 139, 42);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        footer{
+            font:normal 15pt Arial;
+            text-align: end;
+        }
+    </style>
+</head>
+<body>
+    <h1>EXOPLANETS BY NASA </h1>
+    <div id="area" onclick="clic()" onmouseenter="enter()" onmouseout="exit()">
+        ALL PLANETS
+    </div>
+
+    <script>
+
+        
+        function enter() {
+            var a = document.getElementById('area')
+            a.innerText = 'Clique para ver'
+            
+        }
+
+        function clic() {
+           var a = document.getElementById('area')
+           a.innerText = 'Clicou'
+           a.style.background = 'red'
+        }
+
+        function exit() {
+            var a = document.getElementById('area')
+            a.innerText = 'Saiu'
+            a.style.background = 'green';
+        }
+    </script>
+</body>
+<footer>&copy;JoaoDev</footer>
+</html>
